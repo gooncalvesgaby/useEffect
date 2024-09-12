@@ -2,13 +2,13 @@ import styled from "styled-components"
 
 export const Div = styled.div`
 background-color: #ffc0cb40;
-height: 100vh;
 `
 export const Container = styled.section`
 display: flex;
 flex-direction: column;
 align-items: center;
-gap: 5rem;
+gap: 3rem;
+height: 100vh;
 `
 
 export const H1 = styled.h1`

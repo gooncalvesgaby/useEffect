@@ -2,22 +2,25 @@ import * as S from "./mensagemStyle.jsx"
 import { useEffect, useState } from "react"
 
 function Mensagem() {
-    const [girls, setGirls] = useState(0)
+    const [numero, setNumero] = useState(0)
+    const [nome, setNome] = useState('gaby')
 
     useEffect(() => {
-        console.log('renderiza 1')
-    })
-
-    useEffect(() => {
-        console.log('renderiza')
+        console.log('chamou o effect')
     }, [])
-  
+
     return(
         <S.Div>
             <S.Container>
-                <S.H1>GIRLS CODING</S.H1>
-                <S.P>time das girls coding {girls} girls</S.P>
-                <S.Button onClick={() => setGirls((girls) => girls + 1)}>aumente o número do time</S.Button>
+                <S.H1>Estudando useEffect</S.H1>
+                <S.Button onClick={() => {
+                    setNumero(item => item + 1)
+                }}>aumentar</S.Button>
+                <S.P>numero {numero}</S.P>
+                <S.P>Olá {nome}</S.P>
+                <S.Button onClick={() => {
+                    setNome('otavio')
+                }}>Clique para alterar o nome</S.Button>
             </S.Container>
         </S.Div>
     )
