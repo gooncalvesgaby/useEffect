@@ -6,6 +6,10 @@ function Mensagem() {
     const [nome, setNome] = useState('gaby')
 
     useEffect(() => {
+        document.title = `voce clicou ${numero} vezes`
+    }, [numero])
+
+    useEffect(() => {
         console.log('chamou o effect')
     }, [])
 
